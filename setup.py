@@ -1,17 +1,25 @@
 from setuptools import setup, find_packages
+from xstatic.pkg import bootstrap_scss as xs
 
 # The README.txt file should be written in reST so that PyPI can use
 # it to generate your project's PyPI page.
 long_description = open('README.txt').read()
 
 setup(
-    name='XStatic-Bootstrap-SCSS',
-    summary="""Bootstrap-SCSS 3.3.7 (XStatic packaging standard)""",
-    description=long_description,
-    maintainer="Radomir Dopieralski",
-    maintainer_email='openstack@sheep.art.pl',
-    use_scm_version=True,
-    setup_requires=['setuptools_scm', 'wheel'],
+    name=xs.PACKAGE_NAME,
+    version=xs.PACKAGE_VERSION,
+    description=xs.DESCRIPTION,
+    long_description=long_description,
+    classifiers=xs.CLASSIFIERS,
+    keywords=xs.KEYWORDS,
+    maintainer=xs.MAINTAINER,
+    maintainer_email=xs.MAINTAINER_EMAIL,
+    license=xs.LICENSE,
+    url=xs.HOMEPAGE,
+    platforms=xs.PLATFORMS,
     packages=find_packages(),
-    include_package_data=True
+    namespace_packages=['xstatic', 'xstatic.pkg'],
+    include_package_data=True,
+    zip_safe=False,
+    install_requires=[],
 )
