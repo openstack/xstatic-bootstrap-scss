@@ -1,0 +1,11 @@
+In order to upgrade this package, it's currently easiest to follow those steps:
+
+Checkout https://github.com/twbs/bootstrap-sass and enter the directory.
+Check the hash of the version of bootstrap-scss that you want to build in
+https://github.com/twbs/bootstrap repository.
+Run "rake -v convert[the-hash-of-the-commit]".
+Copy all files from assets/javascripts to data/js.
+Copy all files from assets/fonts to data/fonts.
+Copy all files from assets/stylesheets to data/scss.
+Bump the version in __init__.py and run xstatic-release.
+Commit the new files.

@@ -1,5 +1,5 @@
 XStatic-Bootstrap-SCSS
---------------
+----------------------
 
 Bootstrap style library packaged for setuptools (easy_install) / pip.
 
